@@ -2,12 +2,19 @@ import random
 
 import time
 
+############### 파일 불러오기 ########################
+
+#f = open("word_k.txt", "r")
+#kor = f.read
+#list_k = kor.split(",")
+
+####################################################
 word_k = ["아이폰", "파이썬", "자바", "코딩", "깃", "컴퓨터", "마우스", "키보드", "모니터", "어플리케이션"]
 word_e = ["iphone", "python", "java", "coding", "git", "computer", "mouse", "keyboard", "monitor", "application"]
 
 def setting():
-    global word_k,word_e
-    word_k = ["아이폰", "파이썬", "자바", "코딩", "깃", "컴퓨터", "마우스", "키보드", "모니터", "어플리케이션"]
+    global word_K,word_e
+    word_K = ["아이폰", "파이썬", "자바", "코딩", "깃", "컴퓨터", "마우스", "키보드", "모니터", "어플리케이션"]
     word_e = ["iphone", "python", "java", "coding", "git", "computer", "mouse", "keyboard", "monitor", "application"]
 
 name = []
@@ -62,6 +69,10 @@ et = end - start
 et = format(et,".2f")    #정확한 기록을 위해 소수점 둘째 자리까지 출력합니다
 print(name,"의 기록은? ",et,"초")
 
+###################### 파일 만들기 ######################
+
 result = open("타자게임 기록.csv", "a")
-result.write(str(name))
-result.write(str(et))
+result.write("\n{}".format(str(name)))
+result.write("{}\n".format(str(et)))
+
+#######################################################
