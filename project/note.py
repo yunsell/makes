@@ -13,7 +13,7 @@ input()    # 사용자가 엔터를 누를 때까지 기다립니다.
 
 start = time.time()   # 스톱워치를 실행함
 # q = random.choice(words)  # 위에 있는 단어들을 랜덤으로 출력
-w = []
+
 
 
 while n <= 3:
