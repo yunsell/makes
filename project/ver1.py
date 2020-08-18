@@ -6,7 +6,6 @@ words = ["안녕 hi", "잘가 bye", "강아지 dog", "고양이 cat", "사자 ti
          "파이썬 python", "자바 java", "코딩 coding", "깃 git", "컴퓨터 computer", "마우스 mouse",
          "키보드 keyboard", "모니터 screen"]
 
-words2 = ["11","22","33","44"]
 n = 1    # 문제 번호
 print("[타자 게임] 준비되면 엔터 !! ")
 input()    # 사용자가 엔터를 누를 때까지 기다립니다.
@@ -17,7 +16,7 @@ start = time.time()   # 스톱워치를 실행함
 
 
 while n <= 3:
-    q = random.choice(words2)
+    q = random.choice(words)
     print("==문제",n,"번==")
     print(q)
     x = input() # 사용자 입력을 받습니다.
@@ -25,7 +24,7 @@ while n <= 3:
     if q == x:
         print("통과, 다음문제 !")
         n = n + 1
-        q = random.choice(words2)
+        q = random.choice(words)
     elif q != x:
         print("오타 ! 다시 입력하세요")
     else:
